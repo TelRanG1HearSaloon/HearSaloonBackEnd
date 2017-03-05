@@ -1,0 +1,6 @@
+com\borislav\project\provider\MyJsonProvider.class
+com\borislav\project\model\Services.class
+com\borislav\project\application\ApplicationConfig.class
+com\borislav\project\model\Service.class
+com\borislav\project\model\Master.class
+com\borislav\project\resource\MasterResource.class
