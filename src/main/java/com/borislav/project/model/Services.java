@@ -8,14 +8,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 @JsonInclude(Include.NON_EMPTY)
 @XmlRootElement
 
-public class Services implements Serializable{
+public class Services implements Serializable {
 	private static final long serialVersionUID = 1L;
 	List<Service> services;
-	
-	
 
 	public Services(List<Service> services) {
 		this.services = services;

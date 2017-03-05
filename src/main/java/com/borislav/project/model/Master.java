@@ -6,22 +6,22 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_EMPTY)
-public class Master{
-	  String email;
-	  String password;
-	  String name;
-	  String lastName;
-	  String phoneNumber;
-	  String info;
-	  ArrayList<Service> services;
-	  ArrayList<String> arrLocations;
-	  ArrayList<String> languages;
-	  
-	  public void addService(Service service){
-		  this.services.add(service);
-	  }
-	  
-	  public String getEmail() {
+public class Master {
+	String email;
+	String password;
+	String name;
+	String lastName;
+	String phoneNumber;
+	String info;
+	ArrayList<Service> services;
+	ArrayList<String> arrLocations;
+	ArrayList<String> languages;
+
+	public void addService(Service service) {
+		this.services.add(service);
+	}
+
+	public String getEmail() {
 		return email;
 	}
 
@@ -94,48 +94,44 @@ public class Master{
 	}
 
 	public Master() {
-	
+
 	}
 
-	public Master(String email, String password, String name, String lastName, String phoneNumber)
-	  {
-	    this.email = email;
-	    this.password = password;
-	    this.name = name;
-	    this.lastName = lastName;
-	    this.phoneNumber = phoneNumber;
-	    this.services = new ArrayList();
-	    this.arrLocations = new ArrayList();
-	  }
+	public Master(String email, String password, String name, String lastName, String phoneNumber) {
+		this.email = email;
+		this.password = password;
+		this.name = name;
+		this.lastName = lastName;
+		this.phoneNumber = phoneNumber;
+		this.services = new ArrayList();
+		this.arrLocations = new ArrayList();
+	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj){
+		if (this == obj) {
 			return true;
 		}
 		if ((obj == null) || (getClass() != obj.getClass())) {
-		      return false;
-		    }
+			return false;
+		}
 		Master master = (Master) obj;
-		return master.email == null ? true: this.email != null ? this.email.equals(master.email):false;
-		
+		return master.email == null ? true : this.email != null ? this.email.equals(master.email) : false;
+
 	}
 
 	@Override
 	public int hashCode() {
-		int result = this.email != null ? this.email.hashCode():0;
-		result = 31 * result + this.name != null ? this.name.hashCode():0;
-		result = 32 * result + this.password != null ? this.password.hashCode():0;
-		result = 32 * result + this.lastName != null ? this.lastName.hashCode():0;
+		int result = this.email != null ? this.email.hashCode() : 0;
+		result = 31 * result + this.name != null ? this.name.hashCode() : 0;
+		result = 32 * result + this.password != null ? this.password.hashCode() : 0;
+		result = 32 * result + this.lastName != null ? this.lastName.hashCode() : 0;
 
 		return result;
 	}
-	  
-/*	  public void changesServices(ArrayList<Service> tempService) {}
-*/	
-	
 
-
-
+	/*
+	 * public void changesServices(ArrayList<Service> tempService) {}
+	 */
 
 }
