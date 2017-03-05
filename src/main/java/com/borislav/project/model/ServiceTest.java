@@ -4,25 +4,25 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_EMPTY)
-public class Service {
+public class ServiceTest {
 	private String name;
 	private long time;
 	private float priceMin;
 	private float priceMax = -1.0F;
 	private String servInfo;
 
-	public Service() {
+	public ServiceTest() {
 		super();
 	}
 
-	public Service(String name, long time, float priceMin, String servInfo) {
+	public ServiceTest(String name, long time, float priceMin, String servInfo) {
 		this.name = name;
 		this.time = time;
 		this.priceMin = priceMin;
 		this.servInfo = servInfo;
 	}
 
-	public Service(String name, long time, float priceMin, float priceMax, String servInfo) {
+	public ServiceTest(String name, long time, float priceMin, float priceMax, String servInfo) {
 		this.name = name;
 		this.time = time;
 		this.priceMin = priceMin;
@@ -30,14 +30,14 @@ public class Service {
 		this.servInfo = servInfo;
 	}
 
-	public Service(String name, long time, float priceMin, float priceMax) {
+	public ServiceTest(String name, long time, float priceMin, float priceMax) {
 		this.name = name;
 		this.time = time;
 		this.priceMin = priceMin;
 		this.priceMax = priceMax;
 	}
 
-	public Service(String name, long time, float priceMin) {
+	public ServiceTest(String name, long time, float priceMin) {
 		this.name = name;
 		this.time = time;
 		this.priceMin = priceMin;
@@ -90,7 +90,7 @@ public class Service {
 		if ((o == null) || (getClass() != o.getClass())) {
 			return false;
 		}
-		Service service = (Service) o;
+		ServiceTest service = (ServiceTest) o;
 		if (this.time != service.time) {
 			return false;
 		}

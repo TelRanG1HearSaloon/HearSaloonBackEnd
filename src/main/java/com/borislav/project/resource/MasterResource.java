@@ -11,8 +11,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.borislav.project.model.Master;
-import com.borislav.project.model.Service;
+import com.borislav.project.model.MasterTest;
+import com.borislav.project.model.ServiceTest;
 import com.borislav.project.model.Services;
 import com.borislav.project.provider.MyJsonProvider;
 
@@ -22,14 +22,14 @@ public class MasterResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/post/master")
-	public Master postMessage(Master master) throws Exception {
+	public MasterTest postMessage(MasterTest master) throws Exception {
 		String email = "hello world";
 		String password = "hello";
 		String name = "hello";
 		String lastName = "hello";
 		String phoneNumber = "8876578766L";
 		String info = "hello";
-		ArrayList<Service> services = new ArrayList<Service>();
+		ArrayList<ServiceTest> services = new ArrayList<ServiceTest>();
 		ArrayList<String> arrLocations = new ArrayList<String>();
 		ArrayList<String> languages = new ArrayList<String>();
 		arrLocations.add("hello");
@@ -38,8 +38,8 @@ public class MasterResource {
 		float priceMin = 2343.0F;
 		float priceMax = -1.0F;
 		String servInfo = "hello";
-		Service service = new Service(lastName, time, priceMin, priceMax, servInfo);
-		Master master1 = new Master(email, password, name, lastName, phoneNumber);
+		ServiceTest service = new ServiceTest(lastName, time, priceMin, priceMax, servInfo);
+		MasterTest master1 = new MasterTest(email, password, name, lastName, phoneNumber);
 		master1.addService(service);
 		services.add(service);
 		master1.setServices(services);
@@ -67,7 +67,7 @@ public class MasterResource {
 		String lastName = "hello";
 		String phoneNumber = "8876578766L";
 		String info = "hello";
-		ArrayList<Service> services = new ArrayList<Service>();
+		ArrayList<ServiceTest> services = new ArrayList<ServiceTest>();
 		ArrayList<String> arrLocations = new ArrayList<String>();
 		ArrayList<String> languages = new ArrayList<String>();
 		arrLocations.add("hello");
@@ -76,8 +76,8 @@ public class MasterResource {
 		float priceMin = 2343.0F;
 		float priceMax = -1.0F;
 		String servInfo = "hello";
-		Service service = new Service(lastName, time, priceMin, priceMax, servInfo);
-		Master master1 = new Master(email, password, name, lastName, phoneNumber);
+		ServiceTest service = new ServiceTest(lastName, time, priceMin, priceMax, servInfo);
+		MasterTest master1 = new MasterTest(email, password, name, lastName, phoneNumber);
 		Services serv1 = new Services();
 		services.add(service);
 		services.add(service);
@@ -97,7 +97,7 @@ public class MasterResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/register/master")
-	public Response registerMaster(Master master) {
+	public Response registerMaster(MasterTest master) {
 		try {
 			if (master != null) {
 				if (master.getEmail() != null && master.getName() != null && master.getPassword() != null

@@ -14,21 +14,21 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 public class Services implements Serializable {
 	private static final long serialVersionUID = 1L;
-	List<Service> services;
+	List<ServiceTest> services;
 
-	public Services(List<Service> services) {
+	public Services(List<ServiceTest> services) {
 		this.services = services;
 	}
 
 	public Services() {
-		this.services = new ArrayList<Service>();
+		this.services = new ArrayList<ServiceTest>();
 	}
 
-	public List<Service> getServices() {
+	public List<ServiceTest> getServices() {
 		return services;
 	}
 
-	public void setServices(List<Service> services) {
+	public void setServices(List<ServiceTest> services) {
 		this.services = services;
 	}
 

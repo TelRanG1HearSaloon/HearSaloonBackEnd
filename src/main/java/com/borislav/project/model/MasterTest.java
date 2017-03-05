@@ -6,18 +6,18 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_EMPTY)
-public class Master {
+public class MasterTest {
 	String email;
 	String password;
 	String name;
 	String lastName;
 	String phoneNumber;
 	String info;
-	ArrayList<Service> services;
+	ArrayList<ServiceTest> services;
 	ArrayList<String> arrLocations;
 	ArrayList<String> languages;
 
-	public void addService(Service service) {
+	public void addService(ServiceTest service) {
 		this.services.add(service);
 	}
 
@@ -69,11 +69,11 @@ public class Master {
 		this.info = info;
 	}
 
-	public ArrayList<Service> getServices() {
+	public ArrayList<ServiceTest> getServices() {
 		return services;
 	}
 
-	public void setServices(ArrayList<Service> services) {
+	public void setServices(ArrayList<ServiceTest> services) {
 		this.services = services;
 	}
 
@@ -93,11 +93,11 @@ public class Master {
 		this.languages = languages;
 	}
 
-	public Master() {
+	public MasterTest() {
 
 	}
 
-	public Master(String email, String password, String name, String lastName, String phoneNumber) {
+	public MasterTest(String email, String password, String name, String lastName, String phoneNumber) {
 		this.email = email;
 		this.password = password;
 		this.name = name;
@@ -115,7 +115,7 @@ public class Master {
 		if ((obj == null) || (getClass() != obj.getClass())) {
 			return false;
 		}
-		Master master = (Master) obj;
+		MasterTest master = (MasterTest) obj;
 		return master.email == null ? true : this.email != null ? this.email.equals(master.email) : false;
 
 	}
